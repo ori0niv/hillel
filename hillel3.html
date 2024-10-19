@@ -5,9 +5,13 @@
     <title>hillel 3</title>
 </head>
 <script>
-    let number = 10369;
-    let digits = number.toString().split('').join(' ');
-    console.log(digits);
+    // Отримуємо три рядки від користувача
+    let line1 = prompt("Напишіть прізвище");
+    let line2 = prompt("Напишіть ім'я:");
+    let line3 = prompt("Напишіть по батькові");
+
+    // Виводимо їх у довільному порядку однією командою
+    console.log(`${line2}, ${line1}, ${line3}`);
 </script>
 <body>
 hillel
