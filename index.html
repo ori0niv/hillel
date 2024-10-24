@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    let number = prompt('Введіть тризначне число:');
+
+    if (number.length === 3 && !isNaN(number)) {
+        let firstDigit = number[0];
+        let secondDigit = number[1];
+        let thirdDigit = number[2];
+
+        if (firstDigit === secondDigit && secondDigit === thirdDigit) {
+            console.log('Всі цифри однакові.');
+        } else if (firstDigit === secondDigit || secondDigit === thirdDigit || firstDigit === thirdDigit) {
+            console.log('Є однакові цифри.');
+        } else {
+            console.log('Усі цифри різні.');
+        }
+    } else {
+        console.log('Будь ласка, введіть коректне тризначне число.');
+    }
+
+</script>
+<body>
+
+</body>
+</html>
