@@ -5,9 +5,27 @@
     <title>Title</title>
 </head>
 <script>
-    for (let i = 20; i <= 30; i += 0.5) {
-        process.stdout.write(i.toString() + ' ');
+
+        let sum = 0;
+        let count = 0;
+        function calculateAverage(arr) {
+
+        for (let i = 0; i < arr.length; i++) {
+            if (typeof arr[i] === 'number') {
+                sum += arr[i];
+                count++;
+            }
+        }
+
+        if (count === 0) {
+            return 0;
+        }
+
+        return sum / count;
     }
+
+    console.log(calculateAverage([1, 'hello', 3, true, 5, null]));
+
 </script>
 <body>
 
