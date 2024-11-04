@@ -5,26 +5,30 @@
     <title>Title</title>
 </head>
 <script>
+     function enterNumber() {
+         let number;
 
-        let sum = 0;
-        let count = 0;
-        function calculateAverage(arr) {
+         for (let i = 0; i < 10; i++) {
+             number = prompt("Введіть число більше 100:");
 
-        for (let i = 0; i < arr.length; i++) {
-            if (typeof arr[i] === 'number') {
-                sum += arr[i];
-                count++;
-            }
-        }
+             // Перевірка, чи введене значення є числом та більше 100
+             if (Number(number) > 100) {
+                 console.log("Останнє введене число:", number);
+                 return;
+             }
 
-        if (count === 0) {
-            return 0;
-        }
+             // Якщо користувач ввів текст або натиснув "Відміна", виходимо з циклу
+             if (number === null || number.trim() === "") {
+                 console.log("Введення скасовано.");
+                 return;
+             }
+         }
 
-        return sum / count;
-    }
+         // Якщо цикл завершився через 10 ітерацій без введення більше 100
+         console.log("Останнє введене значення:", number);
+     }
 
-    console.log(calculateAverage([1, 'hello', 3, true, 5, null]));
+     enterNumber();
 
 </script>
 <body>
