@@ -1,0 +1,11 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.todo-item {
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
